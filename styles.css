@@ -1,0 +1,287 @@
+/* Paleta de Cores */
+:root {
+    --primary-color: #5C0F8C; /* Roxo */
+    --secondary-color: #FFC72A; /* Amarelo */
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --highlight-color: #FFD700; /* Cor de destaque para texto */
+    --button-color: #5C0F8C; /* Cor do botão */
+    --button-hover-color: #4A0B70; /* Cor do botão ao passar o mouse */
+    --input-background: #F5F5F5; /* Cor de fundo dos itens */
+}
+
+/* Configuração da Página */
+body {
+    font-family: 'Ringold Soft', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    position: relative;
+}
+
+.top-banner, .bottom-banner {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.logo-image {
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: var(--background-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--highlight-color);
+}
+
+/* Estilos para o menu hambúrguer */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    z-index: 2;
+}
+
+.hamburger span {
+    background-color: var(--background-color);
+    height: 3px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-content {
+    padding: 40px 20px;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--background-color);
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    max-width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.proposals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.proposal-item {
+    background-color: var(--input-background);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proposal-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.proposal-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+}
+
+.news-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.news-list a:hover {
+    color: var(--button-hover-color);
+}
+
+#social-media {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--input-background);
+    margin: 50px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .proposal-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
