@@ -148,18 +148,20 @@ h2 {
     margin-bottom: 20px;
 }
 
-.proposals-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+/* Estilo para a área de propostas */
+#proposals {
+    padding: 20px;
 }
 
+/* Estilo individual das propostas */
 .proposal-item {
     background-color: var(--input-background);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    list-style-type: none;
 }
 
 .proposal-item:hover {
@@ -167,9 +169,59 @@ h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.proposal-item h3 {
+.proposal-title {
     color: var(--primary-color);
     margin-bottom: 15px;
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao título */
+}
+
+/* Caixa para descrição da proposta */
+.proposal-description {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Estilo para o campo de busca */
+#search {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--input-background);
+    box-shadow: none; /* Removendo o destaque */
+}
+
+#search::placeholder {
+    color: #999;
+    font-style: italic;
+    opacity: 1; /* Placeholder com opacidade completa */
+}
+
+/* Remover outline ao focar no campo de busca */
+#search:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Bordas com cor primária ao focar */
+}
+
+/* Adicionando espaçamento entre o seletor de área e o campo de busca */
+#area-selector, #search {
+    margin-bottom: 20px;
+}
+
+/* Estilo do seletor de áreas */
+#area-selector {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: var(--input-background);
 }
 
 .news-list {
@@ -260,6 +312,11 @@ footer {
     .proposal-item {
         padding: 20px;
     }
+
+    .proposal-description {
+        padding: 10px;
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -283,5 +340,14 @@ footer {
     .social-icons img {
         width: 40px;
         height: 40px;
+    }
+
+    .proposal-item {
+        padding: 15px;
+    }
+
+    .proposal-description {
+        padding: 8px;
+        font-size: 12px;
     }
 }
